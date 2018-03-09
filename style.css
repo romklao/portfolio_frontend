@@ -1,0 +1,226 @@
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'fontawesome', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto Mono; /*Cuprum*/
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-logo-ham {
+  padding: 19px 5px;
+}
+
+.header-logo {
+  max-width: 50%;
+  font-size: 3em;
+  color: #6798DBFF;
+  font-weight: normal;
+}
+
+.header-ham {
+  display: none;
+  font-size: 2.7em;
+  color: #B8BFDAFF;
+  text-align: right;
+}
+
+.header-name {
+  color: #787B7BFF;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.header-name h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.nav-menu {
+  text-align: center;
+}
+
+.nav-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  padding: 30px 25px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #616161;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social {
+  max-width: 100%;
+  padding: 35px;
+  text-align: center;
+}
+
+.footer-social p {
+  font-size: 12px;
+}
+
+.footer-list {
+  padding: 19px;
+}
+
+.footer-list li {
+  display: inline-block;
+  font-size: 28px;
+  padding: 0 5px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #1C1D1DFF;
+}
+
+
+@media screen and (max-width: 610px) {
+  .header-logo-ham {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .header-logo, .header-ham {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .header-logo {
+    font-size: 3em;
+  }
+  .header-ham {
+    position: absolute;
+    right: 3%;
+    padding: 8px;
+    font-size: 35px;
+  }
+  .header-ham:hover {
+    cursor: pointer;
+  }
+  .header-name {
+    padding: 1.5em;
+  }
+  .header-name h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .nav-menu {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    top: 15.3%;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav-menu.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav-item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .image {
+    width: 100vw;
+    height: 65vw;
+    padding: 0 4px;
+  }
+}
+
+@media screen and (min-width: 611px) {
+  .header-container {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    min-height: 56px;
+    transition: min-height 0.3s;
+    text-align: center;
+  }
+  .header-logo-ham, .header-name {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 850px) {
+  .image {
+    width: 50vw;
+    height: 38vw;
+    padding: 0 2px;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  nav, main, footer {
+    width: 77%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image {
+    height: 22vw;
+    padding: 1px 3px;
+  }
+
+  .project1, .project3 {
+    width: 23vw;
+  }
+
+  .project2 {
+    width: 31vw;
+  }
+
+  .project4, .project5 {
+    width: 38.5vw;
+  }
+
+  .project6, .project7, .project8 {
+    width: 25.66vw;
+  }
+}
+
+
+
