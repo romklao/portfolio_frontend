@@ -90,6 +90,15 @@ ul {
   flex-wrap: wrap;
 }
 
+.figure-image {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+figcaption {
+  font-size: 23px;
+}
+
 .footer-social {
   max-width: 100%;
   padding: 35px;
@@ -186,15 +195,28 @@ ul {
   }
 }
 
-@media screen and (min-width: 550px) and (max-width: 850px) {
+@media screen and (min-width: 612px) and (max-width: 900px) {
   .image {
     width: 50vw;
-    height: 38vw;
+    height: 35vw;
     padding: 0 2px;
   }
 }
 
-@media screen and (min-width: 851px) {
+@media screen and (min-width: 901px) and (max-width: 1150px) {
+  nav, main, footer {
+    width: 77%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image {
+    width: 38vw;
+    height: 30vw;
+    padding: 0 2px;
+  }
+}
+
+@media screen and (min-width: 1151px) {
   nav, main, footer {
     width: 77%;
     margin-left: auto;
@@ -205,14 +227,14 @@ ul {
     padding: 1px 3px;
   }
 
-  .project1, .project3 {
-    width: 23vw;
+  .project1, .project3, .project2 {
+    width: 25.66vw;
   }
 
-  .project2 {
+  /*.project2 {
     width: 31vw;
-  }
 
+*/
   .project4, .project5 {
     width: 38.5vw;
   }
