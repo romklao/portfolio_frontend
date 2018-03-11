@@ -36,10 +36,10 @@ a:hover {
 }
 
 .header-logo {
-  max-width: 50%;
   font-size: 3em;
   color: #6798DBFF;
   font-weight: normal;
+  padding: 5px 0;
 }
 
 .header-ham {
@@ -77,15 +77,37 @@ a:hover {
   padding: 30px 25px;
 }
 
-.container {
+.flex-grid {
   display: flex;
   flex-wrap: wrap;
 }
 
+.flex-grid-thirds .col {
+  width: 33.33%;
+}
+
+.flex-grid-seconds .col {
+  width: 50%;
+}
+
 .figure-image {
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   opacity: 1;
+}
+
+.image {
+  height: 22vw;
+}
+
+.project1, .project3, .project2, .project6, .project7, .project8 {
+  width: 25.66vw;
+  padding: 0 2px;
+}
+
+.project4, .project5 {
+  width: 38.5vw;
+  padding: 0 2px;
 }
 
 .image:hover {
@@ -167,7 +189,7 @@ figcaption {
     background-color: #fff;
     width: 300px;
     position: absolute;
-    top: 103px;
+    top: 113px;
     /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
@@ -185,10 +207,35 @@ figcaption {
     width: 100%;
     text-align: left;
   }
+}
+
+@media screen and (max-width: 580px) {
   .image {
-    width: 100vw;
+    width: 100%;
     height: 65vw;
     padding: 0 4px;
+  }
+  .flex-grid-thirds, .flex-grid-seconds {
+    display: block;
+  }
+
+  .flex-grid-thirds .col, .flex-grid-seconds .col {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 700px) {
+  main, footer {
+    width: 77%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image {
+    width: 100%;
+    height: 50vw;
+  }
+  .flex-grid-thirds, .flex-grid-seconds {
+    display: block;
   }
 }
 
@@ -205,54 +252,41 @@ figcaption {
   }
 }
 
-@media screen and (min-width: 612px) and (max-width: 900px) {
+@media screen and (min-width: 701px) and (max-width: 1100px) {
   .image {
     width: 50vw;
-    height: 35vw;
-    padding: 0 2px;
+    height: 33vw;
+  }
+  .flex-grid-seconds, .flex-grid-thirds {
+    width: 50%;
   }
 }
 
-@media screen and (min-width: 901px) and (max-width: 1150px) {
-  nav, main, footer {
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  main, footer {
     width: 77%;
     margin-left: auto;
     margin-right: auto;
   }
   .image {
-    width: 38vw;
-    height: 30vw;
-    padding: 0 2px;
+    width: 38.5vw;
+    height: 28vw;
   }
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 900px) {
   .header-logo-ham {
     position: absolute;
     left: 10.5%;
   }
-}
-
-@media screen and (min-width: 1151px) {
-  nav, main, footer {
+  main, footer {
     width: 77%;
     margin-left: auto;
     margin-right: auto;
   }
-  .image {
-    height: 22vw;
-    padding: 1px 3px;
-  }
-  .project1, .project3, .project2 {
-    width: 25.66vw;
-  }
-  .project4, .project5 {
-    width: 38.5vw;
-  }
-  .project6, .project7, .project8 {
-    width: 25.66vw;
-  }
 }
+
+
 
 
 
