@@ -132,10 +132,11 @@ figcaption {
 
 .footer-list {
   padding: 19px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-list li {
-  display: inline-block;
   font-size: 28px;
   padding: 0 7px;
 }
