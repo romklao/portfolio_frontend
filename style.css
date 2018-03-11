@@ -31,8 +31,18 @@ a:hover {
   color: #212121;
 }
 
+.header-container {
+  width: 100%;
+}
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header-logo-ham {
-  padding: 19px 5px;
+  padding: 19px 0;
 }
 
 .header-logo {
@@ -77,37 +87,16 @@ a:hover {
   padding: 30px 25px;
 }
 
-.flex-grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-grid-thirds .col {
-  width: 33.33%;
-}
-
-.flex-grid-seconds .col {
-  width: 50%;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(8em, auto);
 }
 
 .figure-image {
   text-align: center;
   padding-bottom: 30px;
   opacity: 1;
-}
-
-.image {
-  height: 22vw;
-}
-
-.project1, .project3, .project2, .project6, .project7, .project8 {
-  width: 25.66vw;
-  padding: 0 2px;
-}
-
-.project4, .project5 {
-  width: 38.5vw;
-  padding: 0 2px;
 }
 
 .image:hover {
@@ -160,18 +149,18 @@ figcaption {
 @media screen and (max-width: 610px) {
   .header-logo-ham {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  .header-logo, .header-ham {
-    display: inline-block;
-    vertical-align: top;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
   .header-logo {
     font-size: 3em;
+    width: 50%;
   }
   .header-ham {
-    position: absolute;
-    right: 3%;
-    padding: 8px;
+    display: block;
+    width: 50%;
+    padding: 12px;
     font-size: 35px;
   }
   .header-ham:hover {
@@ -179,6 +168,7 @@ figcaption {
   }
   .header-name {
     padding: 1.5em;
+    width: 100%;
   }
   .header-name h1 {
     font-size: 32px;
@@ -212,19 +202,14 @@ figcaption {
 @media screen and (max-width: 580px) {
   .image {
     width: 100%;
-    height: 65vw;
-    padding: 0 4px;
+    height: 63vw;
   }
-  .flex-grid-thirds, .flex-grid-seconds {
-    display: block;
-  }
-
-  .flex-grid-thirds .col, .flex-grid-seconds .col {
-    width: 100%;
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media screen and (min-width: 581px) and (max-width: 700px) {
+@media screen and (min-width: 581px) and (max-width: 710px) {
   main, footer {
     width: 77%;
     margin-left: auto;
@@ -234,8 +219,8 @@ figcaption {
     width: 100%;
     height: 50vw;
   }
-  .flex-grid-thirds, .flex-grid-seconds {
-    display: block;
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -244,45 +229,79 @@ figcaption {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     min-height: 56px;
     transition: min-height 0.3s;
-    text-align: center;
   }
-  .header-logo-ham, .header-name {
-    display: inline-block;
-    vertical-align: top;
+  .header-logo-ham {
+    width: 25.5%;
+    text-align: left;
   }
 }
 
-@media screen and (min-width: 701px) and (max-width: 1100px) {
+@media screen and (min-width: 611px) and (max-width: 710px) {
+  .header-logo-ham {
+    width: 15%;
+    text-align: left;
+  }
+  .header-name {
+    width: 85%;
+  }
+}
+
+
+@media screen and (min-width: 711px) and (max-width: 1100px) {
   .image {
-    width: 50vw;
+    width: 49.5vw;
     height: 33vw;
   }
-  .flex-grid-seconds, .flex-grid-thirds {
-    width: 50%;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1100px) {
   main, footer {
-    width: 77%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
+  .header-inner {
+    width: 80%;
+  }
   .image {
-    width: 38.5vw;
-    height: 28vw;
+    width: 39.6vw;
+    height: 29vw;
+  }
+  .figure-image4 {
+    grid-column-start: 2;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width: 900px) {
-  .header-logo-ham {
-    position: absolute;
-    left: 10.5%;
-  }
+@media screen and (min-width: 1101px) {
   main, footer {
-    width: 77%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .header-inner {
+    width: 80%;
+  }
+  .image {
+    width: 26.6vw;
+    height: 22vw;
+    padding: 0 2px;
+  }
+  .figure-image4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .project4 {
+    width: 53.35vw;
+    height: 23vw;
+  }
+  .project5 {
+    height: 23vw;
   }
 }
 
