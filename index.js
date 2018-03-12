@@ -1,5 +1,7 @@
 "use strict"
 
+// TODO: click to open a menu bar for a small screen
+
 var menu = document.querySelector('#menu');
 var main = document.querySelector('main');
 var drawer = document.querySelector('.nav-menu');
