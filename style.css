@@ -5,7 +5,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -47,7 +48,7 @@ a:hover {
 
 .header-logo {
   font-size: 3em;
-  color: #6798DBFF;
+  color: #6798db;
   font-weight: normal;
   padding: 5px 0;
 }
@@ -60,7 +61,7 @@ a:hover {
 }
 
 .header-name {
-  color: #787B7BFF;
+  color: #787b7b;
   text-align: center;
   padding: 1.5em;
 }
