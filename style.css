@@ -93,6 +93,10 @@ a:hover {
   font-size: 18px;
 }
 
+.nav-item:hover {
+  cursor: pointer;
+}
+
 /*TODO: put the grid layout by using css to set the number of columns on class="grid" each row */
 .grid {
   display: grid;
@@ -179,7 +183,7 @@ figcaption {
 }
 
 .footer-list li {
-  font-size: 28px;
+  font-size: 30px;
   padding: 0 7px;
 }
 
