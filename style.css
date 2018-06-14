@@ -97,6 +97,67 @@ a:hover {
   cursor: pointer;
 }
 
+.about-text {
+  display: none;
+}
+
+.show {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  width: 700px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 30px 30px 30px;
+  top: 50%;
+  left: 50%;
+  background: white;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.7);
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  display: none;
+}
+
+.profile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.close-modal {
+  float: right;
+  font-size: 16px;
+  background: none;
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: grey;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+}
+
+.image-profile-wrap {
+  text-align: center;
+  padding: 25px 15px 15px 15px;
+}
+
+.profile-image {
+  max-width: 20vw;
+  border-radius: 50%;
+}
+
+.name {
+  margin: 15px 15px 10px 15px;
+}
+
 /*TODO: put the grid layout by using css to set the number of columns on class="grid" each row */
 .grid {
   display: grid;
@@ -142,7 +203,7 @@ a:hover {
 }
 
 figcaption {
-  font-size: 20px;
+  font-size: 19px;
   margin: 10px 0 15px;
   color: #167ff3;
   font-weight: 100;
@@ -254,7 +315,19 @@ figcaption {
   .image {
     height: 58vw;
   }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .profile-image {
+    max-width: 50vw;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 950px) {
   .project-link {
+    font-size: 14px;
+  }
+  figcaption {
     font-size: 17px;
   }
 }
@@ -271,12 +344,6 @@ figcaption {
   }
   .image {
     height: 35vw;
-  }
-  figcaption {
-    font-size: 18px;
-  }
-  .project-link {
-    font-size: 16px;
   }
 }
 
