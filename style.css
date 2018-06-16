@@ -137,7 +137,7 @@ a:hover {
   background: none;
   padding: 1px 6px;
   border-radius: 3px;
-  color: grey;
+  color: #787b7b;
 }
 
 .close-modal:hover {
@@ -156,7 +156,8 @@ a:hover {
 
 .name {
   margin: 15px 15px 10px 15px;
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 /*TODO: put the grid layout by using css to set the number of columns on class="grid" each row */
@@ -374,9 +375,15 @@ figcaption {
   }
 }
 
-@media screen and (min-width: 611px) and (max-width: 730px) {
+@media screen and (min-width: 611px) and (max-width: 670px) {
   .header-inner {
-    width: 100%;
+    width: 99%;
+  }
+}
+
+@media screen and (min-width: 671px) and (max-width: 730px) {
+  .header-inner {
+    width: 93%;
   }
 }
 
