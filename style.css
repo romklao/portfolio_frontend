@@ -156,6 +156,7 @@ a:hover {
 
 .name {
   margin: 15px 15px 10px 15px;
+  font-size: 25px;
 }
 
 /*TODO: put the grid layout by using css to set the number of columns on class="grid" each row */
@@ -251,6 +252,18 @@ figcaption {
 .footer-list a {
   text-decoration: none;
   color: #272829FF;
+}
+
+.fa-facebook-square {
+  color: #4468b0;
+}
+
+.fa-linkedin {
+  color: #1178b3;
+}
+
+.fa-envelope-square {
+  color: #d04338;
 }
 
 @media screen and (max-width: 610px) {
